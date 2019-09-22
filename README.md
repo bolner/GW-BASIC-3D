@@ -2,13 +2,15 @@
 
 Simple 3D Graphics in GW-Basic
 
+[![Watch the video](youtube_tumbler.png)](https://www.youtube.com/watch?v=a0l9GFDluOo)
+
 Nostalgy might've certainly been among the motivations behind this funny project of mine which brings a long dead programming environment, the [Microsoft GW-Basic](https://en.wikipedia.org/wiki/GW-BASIC), back to the land of the living.
 
-The program [G3D.BAS](G3D.BAS) implements 3D graphics through 4x4 transformation matrices.
+The program [G3D.BAS](G3D.BAS) implements 3D graphics through 4x4 transformation matrices. A spehere is rotated around one of its poles.
 
 I was curious how it would run on a 386 DX. I found it slow, therefore I refactored the program a bit to pre-render the points with the screen coordinates. You can give it a try:
 
-You can run the file [in the attached ZIP](Binary_G3D.zip) inside an original `GWBASIC.EXE` executable, which runs inside a `DosBox`. (As it handledled tokenized/binary files only, and is not able to read text files.)
+You can run the file [in the attached ZIP](Binary_G3D.zip) inside an original `GWBASIC.EXE` executable, which runs inside a `DosBox`. (As the GW-Basic interpreter handled tokenized/binary files only, and is not able to read text files. I entered the code on the native user interface.)
 
 DosBox configuration for 386 DX speed (increase the `cycles` for speedup):
 
@@ -114,7 +116,7 @@ The source code in text format:
  5815 REM *  H(SY, SX) = 2D point          *
  5820 REM **********************************
  5825 SF = -150: REM The Z coordinate of the focal point
- 5840 H(SY,SX,0) = -SF*P(POINTS,0) * 2.4 / (P(POINTS,2)-SF)
+ 5840 H(SY,SX,0) = -SF*P(POINTS,0) * 2 / (P(POINTS,2)-SF)
  5850 H(SY,SX,1) = -SF*P(POINTS,1) * 2 / (P(POINTS,2)-SF)
  5860 RETURN
  5861 REM ***********************

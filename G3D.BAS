@@ -88,7 +88,7 @@
  5815 REM *  H(SY, SX) = 2D point          *
  5820 REM **********************************
  5825 SF = -150: REM The Z coordinate of the focal point
- 5840 H(SY,SX,0) = -SF*P(POINTS,0) * 2.4 / (P(POINTS,2)-SF)
+ 5840 H(SY,SX,0) = -SF*P(POINTS,0) * 2 / (P(POINTS,2)-SF)
  5850 H(SY,SX,1) = -SF*P(POINTS,1) * 2 / (P(POINTS,2)-SF)
  5860 RETURN
  5861 REM ***********************
