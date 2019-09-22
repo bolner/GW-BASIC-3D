@@ -10,9 +10,9 @@ The program [G3D.BAS](G3D.BAS) implements 3D graphics through 4x4 transformation
 
 I was curious how it would run on a 386 DX. I found it slow, therefore I refactored the program a bit to pre-render the points with the screen coordinates. You can give it a try:
 
-You can run the file [in the attached ZIP](Binary_G3D.zip) inside an original `GWBASIC.EXE` executable, which runs inside a `DosBox`. (As the GW-Basic interpreter handled tokenized/binary files only, and is not able to read text files. I entered the code on the native user interface.)
+You can run the file [in the attached ZIP](Binary_G3D.zip) by executing an original `GWBASIC.EXE` inside a `DosBox` emulator. The GW-Basic interpreter handled tokenized/binary files only, and it's not able to read normal text files. (I entered the code on the native user interface.)
 
-DosBox configuration for 386 DX speed (increase the `cycles` for speedup):
+DosBox configuration to get the performance of a `386 DX` machine (increase the `cycles` for speedup):
 
     fullresolution=desktop
     windowresolution=1280x700
